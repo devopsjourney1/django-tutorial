@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Post - {{post.title}} {% endblock %}
+{% block content %}
+
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+            <h4 class="my-0 font-weight-normal">{{post.title}} </h4>
+            </div>
+            <div class="card-body">
+              <p>{{post.body}}</p>
+            </div>
+        </div>
+    </div>
+
+<a href="{% url 'delete' post.id %}" class="btn btn-danger btn-small" >Delete Post</a>
+<a href="{% url 'home' %}">Home</a>
+
+{% endblock %}

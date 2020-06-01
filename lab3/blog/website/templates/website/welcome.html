@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Welcome to my blog{% endblock %}
+
+{% block content %}
+    Hello! The current time is {{current_time}}.
+    <hr>
+    There are currently {{num_posts}} posts.
+    <hr>
+    {% for post in posts %}
+        <h2> {{post.title}} </h2>
+        <p>  {{post.body}}  </p>
+    {% endfor%}
+{% endblock %}
